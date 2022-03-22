@@ -43,7 +43,7 @@ class GeneralDialogueFragment(fm: FragmentManager) {
         return this
     }
 
-    private fun witTag(tag:String): GeneralDialogueFragment {
+    fun withTag(tag:String): GeneralDialogueFragment {
         this.tag =tag
         return this
     }

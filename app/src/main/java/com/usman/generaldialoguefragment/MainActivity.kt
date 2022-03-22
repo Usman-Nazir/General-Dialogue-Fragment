@@ -15,6 +15,15 @@ class MainActivity : AppCompatActivity() {
             .onResume {
                 Log.i("test" ,"resume working")
             }
+            .widthPercent(100)   // 0 -100     -1 => wrap
+            .heightPercent(100)
+            .setHideStatusBar(true)
+            .setHideNavPanel(true)
+            .withTag("sds")
+            .onResume {  }
+            .onPause {  }
+            .onDestroy {  }
+            .dismissListener {  }
             .show {
                 DialogueFragmentLogoutBinding.bind(it)?.let {
 
