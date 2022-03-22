@@ -1,0 +1,24 @@
+package com.usman.generaldialoguefragment
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import com.usman.generaldialoguefragment.databinding.DialogueFragmentLogoutBinding
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        GeneralDialogueFragment(supportFragmentManager)
+            .setLayoutView(R.layout.dialogue_fragment_logout)
+            .onResume {
+                Log.i("test" ,"resume working")
+            }
+            .show {
+                DialogueFragmentLogoutBinding.bind(it)?.let {
+
+                }
+            }
+    }
+}
