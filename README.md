@@ -15,7 +15,7 @@ Step 1. Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.Usman-Nazir:General-Dialogue-Fragment:1.0.0'
+	        implementation 'com.github.Usman-Nazir:General-Dialogue-Fragment:1.0.1'
 	}
 
 
@@ -33,10 +33,10 @@ Step 2. Add the dependency
 		    .onPause {  }
 		    .onDestroy {  }
 		    .dismissListener {  }
-		    .show {
-			DialogueFragmentLogoutBinding.bind(it)?.let {
+		    .show { view ,dialogueFragment ->
+			    DialogueFragmentLogoutBinding.bind(view)?.let {
 
-			}
+			    }
 		    }
 
 ![image](https://user-images.githubusercontent.com/23031447/159422879-539c9c5e-f54c-419e-868d-02ed6c01ff23.png)
