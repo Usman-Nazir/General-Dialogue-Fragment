@@ -76,7 +76,7 @@ class CommonDialogueFragment : DialogFragment() {
     }
 
     private fun inits(view: View) {
-        layoutViewManage?.invoke(view)
+        layoutViewManage?.invoke(view ,this)
     }
 
     override fun dismiss() {
@@ -130,7 +130,7 @@ class CommonDialogueFragment : DialogFragment() {
         }
     }
 
-    var layoutViewManage: ((view :View)->Unit)? = null
+    var layoutViewManage: ((view :View, dialogueFragment:DialogFragment)->Unit)? = null
     var onDestroy: (()->Unit)? = null
     var onPause: (()->Unit)? = null
     var onResume: (()->Unit)? = null

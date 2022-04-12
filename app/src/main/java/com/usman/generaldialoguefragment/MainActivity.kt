@@ -24,8 +24,9 @@ class MainActivity : AppCompatActivity() {
             .onPause {  }
             .onDestroy {  }
             .dismissListener {  }
-            .show {
-                DialogueFragmentLogoutBinding.bind(it)?.let {
+            .show {view , dg ->
+//                dg?.dismiss()
+                DialogueFragmentLogoutBinding.bind(view)?.let {
 
                 }
             }

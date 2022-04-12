@@ -2,6 +2,7 @@ package com.usman.generaldialoguefragment
 
 import android.util.Log
 import android.view.View
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 
 class GeneralDialogueFragment(fm: FragmentManager) {
@@ -48,7 +49,7 @@ class GeneralDialogueFragment(fm: FragmentManager) {
         return this
     }
 
-    fun show(layoutViewManage: ((view: View)->Unit)? = null){
+    fun show(layoutViewManage: ((view: View , dialogueFragment: DialogFragment)->Unit)? = null){
         if (fm ==null || layoutView ==null) return
         fm?.let { fm ->
             val ft = fm?.beginTransaction()
